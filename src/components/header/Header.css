@@ -1,0 +1,28 @@
+.header {
+  border-bottom: 1px solid lightblue;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.col {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.collection-amount {
+  display: inline-block;
+  background-color: blue;
+  border-radius: 5px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-weight: 600;
+  margin-left: 10px;
+  color: #fff;
+}

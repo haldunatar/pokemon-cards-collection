@@ -1,0 +1,23 @@
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid lightblue;
+  padding-left: 15px;
+}
+
+.input--error {
+  border: 1px solid red;
+}
+
+.input-error-text {
+  color: red;
+  text-align: left;
+}
