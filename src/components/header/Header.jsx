@@ -14,7 +14,7 @@ export function Header() {
 
   useEffect(() => {
     const collection = service.getCollection();
-    addToCollectionContext(collection); 
+    addToCollectionContext(collection);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -31,7 +31,9 @@ export function Header() {
           <Col className="col" sm>
             <Link to="/collection">
               Collection
-              <span className="collection-amount">{collection.list?.length}</span>
+              <span className="collection-amount">
+                {collection.list?.length || 0}
+              </span>
             </Link>
           </Col>
         </Row>

@@ -28,8 +28,8 @@ export function CollectionProvider({ children }) {
 
   const removeFromCollectionContext = (card) => {
     if (card) {
-      card(() => {
-        return collection.filter((item) => item.id !== card.id);
+      setCollection(() => {
+        return collection.list?.filter((item) => item.id !== card.id);
       });
     }
   };
