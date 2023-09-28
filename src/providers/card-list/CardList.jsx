@@ -15,11 +15,6 @@ export function CardListProvider({ children }) {
     }
   };
 
-  /**
-   *
-   * selectedCards in card list is necessary to disable
-   * selected card after
-   */
   const updateSelectedCards = (selectedCardId) => {
     if (selectedCardId) {
       const list = cardList.list?.map((item) => {

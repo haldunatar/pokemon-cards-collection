@@ -1,12 +1,13 @@
 import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
+// import Bcard from "react-bootstrap/Bcard";
+import { Card as Bcard } from "react-bootstrap";
 
-export function CardContainer({ item, button, onCardClick }) {
+export function Card({ item, button, onCardClick }) {
   return (
     <>
-      <Card id={item?.id} style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={item?.images?.small} />
-        <Card.Body>
+      <Bcard id={item?.id} style={{ width: "18rem" }}>
+        <Bcard.Img variant="top" src={item?.images?.small} />
+        <Bcard.Body>
           <Button
             variant="primary"
             disabled={button?.disabled}
@@ -14,8 +15,8 @@ export function CardContainer({ item, button, onCardClick }) {
           >
             {button.text}
           </Button>
-        </Card.Body>
-      </Card>
+        </Bcard.Body>
+      </Bcard>
     </>
   );
 }

@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { CollectionContext } from "../../providers/collection/Collection";
 import { CollectionService } from "../../services/collection/Collection.service";
-import { CardListContainer } from "../../components/card-list/CardList";
+import { CardList } from "../../components/card-list/CardList";
 import "../cards-list/cardList.css";
 
-export function Collection() {
+export function CollectionPage() {
   const { collection } = useContext(CollectionContext);
   const collectionService = CollectionService();
 
@@ -15,7 +15,7 @@ export function Collection() {
   return (
     <section>
       <h1>Collection</h1>
-      <CardListContainer
+      <CardList
         list={collection.list}
         loading={collection.loading}
         collectionPage={true}

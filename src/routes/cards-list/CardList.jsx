@@ -3,11 +3,11 @@ import { CardListContext } from "../../providers/card-list/CardList";
 import { CollectionService } from "../../services/collection/Collection.service";
 
 import "./cardList.css";
-import { CardListContainer } from "../../components/card-list/CardList";
+import { CardList } from "../../components/card-list/CardList";
 import { Search } from "../../components/header/search/Search";
 import { CollectionContext } from "../../providers/collection/Collection";
 
-export function CardList() {
+export function CardListPage() {
   const { cardList, updateSelectedCards } = useContext(CardListContext);
   const service = CollectionService();
   const { collection } = useContext(CollectionContext);
@@ -40,7 +40,7 @@ export function CardList() {
 
       <Search />
 
-      <CardListContainer
+      <CardList
         list={getSelectedCards(cardList.list)}
         loading={cardList.loading}
         error={cardList.error ? "Oeps! Service error!" : null}

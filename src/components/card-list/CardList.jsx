@@ -1,8 +1,8 @@
 import Alert from "react-bootstrap/Alert";
-import { CardContainer } from "../card/Card";
+import { Card } from "../card/Card";
 import "./cardList.css";
 
-export function CardListContainer({
+export function CardList({
   list,
   loading,
   error,
@@ -23,7 +23,7 @@ export function CardListContainer({
           {list?.map((item) => {
             return (
               <div className="card-item" key={item.id}>
-                <CardContainer
+                <Card
                   item={item}
                   button={{
                     disabled: item.selected,

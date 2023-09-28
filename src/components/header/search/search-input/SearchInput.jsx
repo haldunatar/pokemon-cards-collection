@@ -29,7 +29,7 @@ export function SearchInput({ onSearch }) {
         onChange={handleSearch}
       />
       {!isValidInput && (
-        <p className="invalid-feedback">
+        <p className="input-error-text">
           Only letters and numbers are allowed.
         </p>
       )}
