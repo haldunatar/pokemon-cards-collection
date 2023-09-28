@@ -20,17 +20,17 @@ export function CollectionProvider({ children }) {
         list,
       };
 
-      setCollection(() => {
-        return newState;
-      });
+      setCollection(() => newState);
     }
   };
 
   const removeFromCollectionContext = (card) => {
     if (card) {
-      setCollection(() => {
-        return collection.list?.filter((item) => item.id !== card.id);
-      });
+      const newState = {
+        ...collection,
+        list: collection.list?.filter((item) => item.id !== card),
+      };
+      setCollection(() => newState);
     }
   };
 

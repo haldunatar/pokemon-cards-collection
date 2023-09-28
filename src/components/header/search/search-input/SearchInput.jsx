@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./SearchInput.css";
+
 export function SearchInput({ onSearch }) {
   const [isValidInput, setValidInput] = useState(true);
 
@@ -20,7 +21,7 @@ export function SearchInput({ onSearch }) {
   }
 
   return (
-    <section className="">
+    <section>
       <input
         className={!isValidInput ? "input--error" : ""}
         type="text"
@@ -28,7 +29,7 @@ export function SearchInput({ onSearch }) {
         onChange={handleSearch}
       />
       {!isValidInput && (
-        <p className="input-error-text">
+        <p className="invalid-feedback">
           Only letters and numbers are allowed.
         </p>
       )}
